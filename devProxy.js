@@ -37,7 +37,7 @@ var util = require('util');
 var path = require('path');
 var fs = require('fs');
 var dir = process.argv.length > 2 ? process.argv[2] : process.cwd();
-var config = require(path.join(dir, 'config/proxyConfig.js'));
+var config = require(path.join(dir, '/proxyConfig.js'));
 
 var mimes = {
 	'': 'application/octet-stream',

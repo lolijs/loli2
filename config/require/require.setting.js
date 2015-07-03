@@ -8,14 +8,25 @@
         "mmRouter" : "/external/avalon/mmRouter",
         "mmPromise" : "/external/avalon/mmPromise",
         "mmState" : "/external/avalon/mmState",
-        "rConfig" : "/src/common/router/router.config",
-        "require.custom" : "/external/require/require.custom"
+        "rConfig" : "/config/router/router.config"
     };
+    var ddeps = ["/external/require/require.config.js?v="+new Date().valueOf()];
+
+    var plugins = {
+        "$": "/plugins/jquery/jquery"
+    };
+    var plugindeps = ["$"];
+
+    // 合并参数
+    var key;
+    for(key in plugins){
+        paths[key] = plugins[key];
+    }
+    var deps = ddeps.concat(plugindeps);
+
+
     window.require = {
-        paths:paths,
-        deps : [
-            "/external/require/require.config.js?v="+new Date().valueOf(),
-            "require.custom"
-        ]
+        paths : paths,
+        deps : deps
     };
 })();

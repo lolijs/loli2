@@ -3,6 +3,7 @@
 
     var av = avalon;
     var successedFlag = "res";
+
     // 配置
     {
        avalon.config({loader: false});

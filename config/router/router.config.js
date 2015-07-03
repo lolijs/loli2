@@ -3,13 +3,13 @@
 
     // 系统需要的router
     var routerList = [
-        "main", // 主框架
-        "index", // 首页
-        "user" // 用户中心
+        //"main", // 主框架
+        //"index", // 首页
+        //"user" // 用户中心
         //"footer"
     ];
 
-    var i,resList=[],baseurl="common/router/";
+    var i,resList=[],baseurl="/src/router/";
 
     for(i in routerList){
         resList.push(baseurl+routerList[i]);
